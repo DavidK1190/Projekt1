@@ -1,0 +1,530 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  /**** Tloušťka písma ****/
+
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  /**** Velikost písma ****/
+
+  --fs-16: 16px;
+  --fs-20: 20px;
+  --fs-32: 32px;
+  --fs-40: 40px;
+  --fs-44: 44px;
+  --fs-80: 80px;
+
+  /**** Barvy použité na webu ****/
+
+  --clr-font-white: #fff;
+  --clr-font-pink: #efa69d;
+  --clr-hover: #e9877b;
+  --clr-bg-first: #33292a;
+  --clr-bg-second: #644b4f;
+  --clr-bg-footer: #333333;
+  --clr-bg-white: #fff;
+}
+
+/**** Navigační lišta ****/
+
+nav {
+  display: flex;
+  background-color: var(--clr-bg-first);
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/**** Horizontální menu ****/
+
+.menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: var(--clr-navbar);
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--clr-font-white);
+  font-weight: var(--fw-bold);
+}
+
+.menu a:hover {
+  color: var(--clr-hover);
+}
+
+/**** Hamburger ikona ****/
+
+.menu img {
+  display: none;
+}
+
+/**** Responsivní Menu do 756px ****/
+
+@media (max-width: 756px) {
+  .menu {
+    height: 75px;
+  }
+
+  .menu a {
+    display: none;
+  }
+
+  .menu img {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 35px;
+    right: 10px;
+  }
+}
+
+/**** Webový kontejner ****/
+
+.website-container {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+/**** Header s pozadím ****/
+
+.header-container {
+  position: relative;
+  display: flex;
+  height: 100vh;
+}
+
+.h1-container {
+  position: relative;
+  height: calc(100vh - 50px);
+  background-image: url(../img/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  position: absolute;
+  color: var(--clr-font-white);
+  z-index: 1;
+  font-size: var(--fs-80);
+  right: 0px;
+  bottom: 100px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--fs-44);
+    padding-right: 20px;
+  }
+}
+/**** Sekce About Us ****/
+
+.about-container {
+  margin: 150px auto;
+  position: relative;
+}
+
+.about-content h2 {
+  font-size: var(--fs-40);
+  margin-bottom: 10px;
+}
+
+.about-container p {
+  font-size: var(--fs-16);
+  max-width: 50%;
+}
+
+.about-img {
+  float: right;
+  max-width: 400px;
+  margin-left: 30px;
+}
+
+/**** About Us  - Responsivita do 756px ****/
+
+@media (max-width: 768px) {
+  .about-container {
+    margin-top: 150px;
+    margin-bottom: 0px;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .about-container p {
+    max-width: 100%;
+  }
+
+  .about-content h2 {
+    position: absolute;
+    bottom: 600px;
+  }
+
+  .about-img {
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+/**** Sekce What We Do ****/
+
+.what-we-do-container {
+  height: 600px;
+  background-color: var(--clr-bg-first);
+  width: 100%;
+  z-index: 1000;
+}
+
+.what-we-do-heading {
+  color: var(--clr-font-white);
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 80px;
+  font-size: var(--fs-32);
+}
+
+.what-we-do-container-content {
+  display: flex;
+  align-items: center;
+}
+
+.what-we-do-container-content p {
+  color: var(--clr-font-white);
+  font-size: var(--fs-16);
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/**** Icon Kontejner ****/
+
+.icon-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--clr-font-white);
+  text-align: center;
+}
+
+.icon-container img {
+  width: 64px;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+/**** What We Do  - Responsivita do 756px ****/
+
+@media (max-width: 768px) {
+  .what-we-do-container {
+    position: relative;
+    padding: 40px;
+    height: auto;
+  }
+  .what-we-do-container-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .what-we-do-heading {
+    h2 {
+      font-size: var(--fs-40);
+    }
+  }
+
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hiking {
+    margin-bottom: 20px;
+  }
+  .cycling {
+    margin-bottom: 20px;
+  }
+  .surfing {
+    margin-bottom: 20px;
+  }
+}
+
+/**** Gallery Kontejner ****/
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding-top: 100px;
+  gap: 20px;
+  padding-bottom: 100px;
+}
+
+.gallery-container img {
+  width: calc(100% / 3 - 20px);
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/**** Gallery Kontejner - Responsivita do 756px ****/
+
+@media (max-width: 768px) {
+  .gallery-container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: auto;
+  }
+
+  .gallery-container img {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .gallery-container .custom-img {
+    height: 150px;
+  }
+}
+
+/**** Sekce Kontakt ****/
+
+.contact-container {
+  height: auto;
+  background-color: var(--clr-bg-second);
+  width: 100%;
+  z-index: 1000;
+}
+
+.contact-container-content {
+  color: var(--clr-font-white);
+  display: flex;
+  padding-top: 100px;
+  height: 250px;
+  justify-content: space-between;
+}
+
+.contact-container-content h2 {
+  font-size: var(--fs-40);
+}
+
+.contact-container-content p {
+  font-size: var(--fs-16);
+  width: 66%;
+  text-align: left;
+}
+
+.contact-container-content p span {
+  font-size: var(--fs-16);
+  display: block;
+  margin-top: 20px;
+}
+
+/**** Sekce Kontakt  - Responsivita do 756px ****/
+
+@media (max-width: 768px) {
+  .contact-container-content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  .contact-container-content h2 {
+    padding-bottom: 20px;
+  }
+
+  .contact-container-content p {
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
+  }
+}
+
+/**** Button Kontejner ****/
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+#button1 {
+  max-width: 150px;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: var(--clr-bg-white);
+  font-weight: bold;
+  font-size: var(--fs-20);
+  box-shadow: 5px 5px 5px black;
+}
+
+#button1:hover {
+  background-color: var(--clr-hover);
+  color: var(--clr-font-white);
+}
+
+/**** Button Kontejner  - Responsivita do 756px ****/
+
+@media (max-width: 768px) {
+  .button-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    height: auto;
+  }
+}
+
+/**** Sekce Reviews ****/
+
+.reviews-content {
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  width: 350px;
+  text-align: center;
+  height: auto;
+}
+
+.reviews-content h2 {
+  padding-bottom: 20px;
+  font-size: var(--fs-40);
+}
+
+.reviews-coments {
+  display: flex;
+}
+
+.reviews-coments img {
+  display: block;
+  margin: auto;
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/**** Sekce Reviews  - Responsivita do 756px ****/
+
+@media (max-width: 768px) {
+  .reviews-coments {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/**** Sekce Komentáře ****/
+
+.comment-first {
+  margin-right: 100px;
+}
+
+@media (max-width: 768px) {
+  .comment-first {
+    margin: 0;
+    padding-bottom: 50px;
+  }
+}
+
+.comment-first p {
+  font-size: var(--fs-16);
+  padding-top: 20px;
+  text-align: center;
+}
+
+.comment-first h3 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.comment-second p {
+  font-size: var(--fs-16);
+  padding-top: 20px;
+  text-align: center;
+}
+
+.comment-second h3 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+/**** Image Kontejner ****/
+
+.image-container {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-container img {
+  width: calc(100% / 2);
+}
+
+/**** Image Kontejner  - Responsivita do 756px ****/
+
+@media (max-width: 768px) {
+  .image-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+}
+
+/**** Sekce Footer ***/
+
+footer {
+  background-color: var(--clr-bg-footer);
+}
+
+.footer-div {
+  padding: 20px;
+  text-align: center;
+  height: auto;
+}
+
+.footer-div a {
+  color: var(--clr-font-pink);
+}
+
+.footer-div a:hover {
+  color: var(--clr-font-white);
+}
+
+.footer-div h6 {
+  padding-top: 10px;
+  color: var(--clr-font-white);
+}
