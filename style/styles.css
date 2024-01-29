@@ -128,6 +128,9 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .h1-container {
+    height: calc(100vh - 75px);
+  }
   h1 {
     font-size: var(--fs-44);
     padding-right: 20px;
